@@ -1,0 +1,36 @@
+﻿@model WebApplication1.Models.CarParts
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CarParts</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PartNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PartNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PartName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PartName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleBrand)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VehicleBrand)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
